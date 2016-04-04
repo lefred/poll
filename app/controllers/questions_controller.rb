@@ -10,7 +10,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
-    @question.secret = SecureRandom.urlsafe_base64(nil, false) unless @question.secret?
+    @question.secret = SecureRandom.urlsafe_base64(nil, false)[0, 5] unless @question.secret?
     @question.save!
 
     params[:options].each do |option|
