@@ -21,7 +21,6 @@ class QuestionsController < ApplicationController
         new_option.save!
       end
     end
-
     redirect_to "/#{@question.secret}"
   end
 
@@ -32,6 +31,8 @@ class QuestionsController < ApplicationController
 
   def results
     @options = @question.options
+    @qr = RQRCode::QRCode.new("http://192.168.1.2:3001/"+@question.secret).to_img.resize(300, 300).to_data_url
+
   end
 
   def check_secret_availability
