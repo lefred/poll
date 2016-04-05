@@ -25,7 +25,14 @@ $ rake db:migrate
 $ cp .env.example .env
 ```
 
-Modify the `.env` file to match with your [Pusher](http://pusher.com) application credentials or setup [Slanger](https://github.com/stevegraham/slanger) (perhaps with [docker-slanger](https://github.com/adambutler/docker-slanger))
+I use it with slanger:
+
+```
+$ gem install slanger
+$ slanger --app_key 12345678901234567890 --secret your-pusher-secret
+```
+
+Modify the `.env` file to match with your  [Slanger](https://github.com/stevegraham/slanger)
 
 
 ## Contributing
