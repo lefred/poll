@@ -4,13 +4,11 @@ Poll is a Ruby on Rails applications for conducting Polls simply and in real-tim
 
 Here are a few screensots from http://poll.lab.io
 
-![image](https://cloud.githubusercontent.com/assets/1238468/4652277/b9e13d4e-54a3-11e4-88a2-52d832787057.png)
+![poll_results](https://cloud.githubusercontent.com/assets/609675/14274324/e4cde01a-fb10-11e5-9069-36613f8ef245.png)
+![poll_questions](https://cloud.githubusercontent.com/assets/609675/14274325/e4d0a3cc-fb10-11e5-8223-f4d139edb9f1.png)
+![poll_questions_iphone](https://cloud.githubusercontent.com/assets/609675/14274326/e4d3c4bc-fb10-11e5-9b46-1b501c01b9b1.png)
 
-![image](https://cloud.githubusercontent.com/assets/1238468/4652269/acce543e-54a3-11e4-9006-9fe4b0113557.png)
-
-![image](https://cloud.githubusercontent.com/assets/1238468/4652272/b2063976-54a3-11e4-8a92-737827ec53cc.png)
-
-This work is a fork of git@github.com:adambutler/poll.git
+This work is a fork of https://github.com/adambutler/poll
 
 It adds QRCode on the poll results to share on screen and add Percona Live Logo
 
