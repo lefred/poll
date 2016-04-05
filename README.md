@@ -10,10 +10,14 @@ Here are a few screensots from http://poll.lab.io
 
 ![image](https://cloud.githubusercontent.com/assets/1238468/4652272/b2063976-54a3-11e4-8a92-737827ec53cc.png)
 
+This work is a fork of git@github.com:adambutler/poll.git
+
+It adds QRCode on the poll results to share on screen and add Percona Live Logo
+
 ## Installing
 
 ```
-$ git clone git@github.com:adambutler/poll.git
+$ git clone git@github.com:lefred/poll.git
 $ cd poll
 $ bundle install
 $ rake db:create
