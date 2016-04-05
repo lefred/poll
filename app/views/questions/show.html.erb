@@ -9,8 +9,9 @@
       <% @question.options.each do |option| %>
         <div class="field">
           <%= label_tag "vote_option_id_#{option.id}", class: "radio" do %>
-            <%= radio_button("vote", "option_id", option.id, class: "visually-hidden", ng_model: "option") %><!--
-            --><span class="outer"><span class="inner"></span></span><%= option.title %><!--
+
+            <%= radio_button("vote", "option_id", option.id, class: "visually-hidden", ng_model: "option") %>
+            <span class="outer"><span class="inner"></span></span><%= option.title %><!--
           --><% end %>
         </div>
       <% end %>

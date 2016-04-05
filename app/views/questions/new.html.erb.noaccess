@@ -1,0 +1,8 @@
+<h1>Poll</h1>
+<h2 class="subtle">Voting done simply in real-time</h2>
+
+<div ng-controller="QuestionController">
+
+   <h1>Nothing for you here !</h1>
+
+</div>
