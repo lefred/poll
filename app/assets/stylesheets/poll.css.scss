@@ -164,6 +164,14 @@ h2, h3, h4, input[type=submit] {
   font-weight: 100;
 }
 
+.answerok {
+    color: $green
+}
+
+.answerwrong {
+    color: $red
+}
+
 .subtle {
   color: $gray-darker;
 }

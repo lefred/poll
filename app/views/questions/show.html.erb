@@ -15,7 +15,12 @@
                 <% if not defined? @vote.option_id  %>
                     <%= radio_button("vote", "option_id", option.id, class: "visually-hidden", ng_model: "option") %>
                 <% elsif @vote.option_id == option.id %>
-                    <span>(your answer)</span>
+                    <% if option.correct == true %>
+                        <span class="answerok">(correct)
+                    <% else %>
+                        <span class="answerwrong">(wrong)
+                    <% end %>
+                    </span>
                 <% elsif @vote.secret.nil? %>
                     <%= radio_button("vote", "option_id", option.id, class: "visually-hidden", ng_model: "option") %>
                 <% end %>

@@ -12,6 +12,24 @@ This work is a fork of https://github.com/adambutler/poll
 
 It adds QRCode on the poll results to share on screen and add Percona Live Logo
 
+You can now add a question as a real question, not only a poll.
+
+![selection_154](https://cloud.githubusercontent.com/assets/609675/14320324/e9dfa2e6-fc14-11e5-9a94-f86804ec0b3f.png)
+
+It's also possible to set which value is correct:
+
+![selection_155](https://cloud.githubusercontent.com/assets/609675/14320330/ee20f314-fc14-11e5-8314-acef3ce74b7d.png)
+
+You can't vote twice and you see your previous answer:
+
+![selection_153](https://cloud.githubusercontent.com/assets/609675/14320204/82c4d8b0-fc14-11e5-857d-84b1a6341d4c.png)
+![img_3750](https://cloud.githubusercontent.com/assets/609675/14320220/9698f740-fc14-11e5-8015-01d37dc1213c.PNG)
+
+Results are now aggregated only in correct or wrong:
+
+![selection_152](https://cloud.githubusercontent.com/assets/609675/14320228/9ba610f6-fc14-11e5-9f93-50d6f6a1e1f0.png)
+
+
 ## Installing
 
 ```
