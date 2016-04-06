@@ -5,12 +5,16 @@
   <%= form_for(@question, html: { name: "newQuestionForm" }) do |f| %>
     <div class="field">
       <%= f.text_field :title, class: "large", autocomplete: "off", placeholder: "Add your question here", ng_model: "question" %>
+      <small ng-hide="answerShown">
+         <a href="#" ng-click="answerShown = true;q_type = 2" >this is a question</a>
+      </small>
     </div>
-
+    <span id="textValue" ng-show="textdebug"> <%= f.text_field :q_type, ng_model: "q_type" %></span>
     <h3>Add your options below:</h3>
 
     <div class="field" ng-repeat="option in options track by $index">
       <%= text_field_tag "options[][title]", @option.title, autocomplete: "off", placeholder: "Option {{$index+1}}", ng_model: "options[$index]", ng_blur: "optionBlur($index, option)" %>
+      <span id="answer" ng-show="answerShown">correct <%=  check_box_tag "answer[{{$index}}]" %></span>
     </div>
 
 
