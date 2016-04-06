@@ -11,13 +11,23 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     @question.secret = SecureRandom.urlsafe_base64(nil, false)[0, 5] unless @question.secret?
+    if @question.q_type != 2
+        @question.q_type = 1
+    end
     @question.save!
 
-    params[:options].each do |option|
+    params[:options].each_with_index do |option, index|
       if option[:title] != ""
         new_option = Option.new
         new_option.title = option[:title]
         new_option.question_id = @question.id
+        if params.include? :answer
+            if params[:answer][index.to_s] == "1" && @question.q_type == 2
+                new_option.correct = 1
+            elsif @question.q_type == 2
+                new_option.correct = 0
+            end
+        end
         new_option.save!
       end
     end
@@ -46,7 +56,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:title, :secret)
+    params.require(:question).permit(:title, :secret, :q_type)
   end
 
   def check_secret_is_unique

@@ -35,4 +35,5 @@ class VotesController < ApplicationController
   def question_params
     params.require(:question).permit(:title)
   end
+
 end
