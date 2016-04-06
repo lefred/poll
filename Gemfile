@@ -55,3 +55,4 @@ end
 gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'rqrcode_png'  
+gem 'rails-settings-cached', "~> 0.4.0"

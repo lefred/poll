@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :questions
   get '/admin123' => 'admin#dashboard'
+  post '/admin123' => 'admin#dashboard'
   put '/votes' => 'votes#update'
   get ':secret' => 'questions#show'
   get ':secret/results' => 'questions#results'
