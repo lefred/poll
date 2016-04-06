@@ -9,8 +9,17 @@
       <% @question.options.each do |option| %>
         <div class="field">
           <%= label_tag "vote_option_id_#{option.id}", class: "radio" do %>
-
-            <%= radio_button("vote", "option_id", option.id, class: "visually-hidden", ng_model: "option") %>
+            <% if  @question.q_type != 2  %>
+               <%= radio_button("vote", "option_id", option.id, class: "visually-hidden", ng_model: "option") %>
+            <% else %>   
+                <% if not defined? @vote.option_id  %>
+                    <%= radio_button("vote", "option_id", option.id, class: "visually-hidden", ng_model: "option") %>
+                <% elsif @vote.option_id == option.id %>
+                    <span>(your answer)</span>
+                <% elsif @vote.secret.nil? %>
+                    <%= radio_button("vote", "option_id", option.id, class: "visually-hidden", ng_model: "option") %>
+                <% end %>
+            <% end %>
             <span class="outer"><span class="inner"></span></span><%= option.title %><!--
           --><% end %>
         </div>
