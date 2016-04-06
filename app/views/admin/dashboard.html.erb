@@ -1,5 +1,17 @@
 <h1>Admin</h1>
 
+<div ng-controller="AdminController">
+  <%= form_tag do %>
+    <div class="field">
+      Set IP and port: <%= text_field_tag(:ip, MySettings.ip, class: "smallinput") %>
+      <%= submit_tag("Save", class: "admin") %>
+    </div>
+
+  <% end %>
+</div>
+
+
+
 <h3>Top Questions</h3>
 
 <table class="text--left text--readability">

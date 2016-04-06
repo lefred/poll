@@ -3,6 +3,9 @@ class AdminController < ApplicationController
 
   def dashboard
     @questions = Question.all.sort_by { |question| -question.votes.count }.first(10)
+    if not params[:ip].blank?
+        MySettings.ip = params[:ip]
+    end
   end
 
   private
