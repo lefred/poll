@@ -29,6 +29,9 @@ Results are now aggregated only in correct or wrong:
 
 ![selection_152](https://cloud.githubusercontent.com/assets/609675/14320228/9ba610f6-fc14-11e5-9f93-50d6f6a1e1f0.png)
 
+It's now also possible to add and store the IP and port where the server is listening to add in the QRCode generation:
+
+![selection_157](https://cloud.githubusercontent.com/assets/609675/14335685/7ccf4e7e-fc5d-11e5-847c-7f0923562e2e.png)
 
 ## Installing
 
