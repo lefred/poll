@@ -41,7 +41,7 @@ class QuestionsController < ApplicationController
 
   def results
     @options = @question.options
-    @qr = RQRCode::QRCode.new("http://"+MySettings.ip+"/"+@question.secret, :size => 4, :level => :h).to_img.resize(300, 300).to_data_url
+    @qr = RQRCode::QRCode.new("http://lefred.be:3000/"+@question.secret, :size => 3, :level => :h).to_img.resize(300, 300).to_data_url
 
   end
 

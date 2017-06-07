@@ -13,10 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160406213613) do
 
-  create_table "ips", force: true do |t|
-    t.string "ip"
-  end
-
   create_table "options", force: true do |t|
     t.string   "title"
     t.integer  "question_id"
@@ -30,7 +26,7 @@ ActiveRecord::Schema.define(version: 20160406213613) do
     t.string   "secret"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "q_type",     limit: 1, default: 1
+    t.integer  "q_type",     default: 1
   end
 
   create_table "settings", force: true do |t|

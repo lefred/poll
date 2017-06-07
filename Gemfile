@@ -42,7 +42,7 @@ gem 'rails-assets-angular', "1.3.0.rc.4"
 gem 'pusher'
 
 group :production, :staging do
-  gem 'pg'
+#  gem 'pg'
   gem 'rails_12factor'
 end
 

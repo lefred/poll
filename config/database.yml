@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password:
+  password: fred
   socket: /var/lib/mysql/mysql.sock
 
 development:
@@ -52,3 +52,4 @@ production:
   database: poll_production
   username: poll
   password: <%= ENV['POLL_DATABASE_PASSWORD'] %>
+
